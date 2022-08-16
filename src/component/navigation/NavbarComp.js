@@ -8,7 +8,7 @@ import {
     Link
 } from "react-router-dom"
 import About from "../../pages/About";
-import Home from "../../pages/Home";
+import Stock from "../../pages/Stock";
 
 export default class NavbarComp extends Component {
     render() {
@@ -21,7 +21,7 @@ export default class NavbarComp extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to={"/"}> Home </Nav.Link>
+                        <Nav.Link as={Link} to={"/"}> Pantry </Nav.Link>
                         <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
@@ -30,7 +30,7 @@ export default class NavbarComp extends Component {
             </div>
             <div>
                 <Routes>
-                <Route exact path="/" element={<Home/>}/>
+                <Route exact path="/" element={<Stock/>}/>
                 <Route exact path="/about" element={<About/>}/>
                 </Routes>
             </div>

@@ -6,7 +6,6 @@ export default class About extends Component {
   render() {
     return (
       <div>
-        {/* <p>Design your About me page </p> */}
         <div class="split left">
           <div className="centered">
             <img
