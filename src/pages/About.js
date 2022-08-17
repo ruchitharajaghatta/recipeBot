@@ -6,7 +6,7 @@ export default class About extends Component {
   render() {
     return (
       <div>
-        <div class="split left">
+        <div class="spl left">
           <div className="centered">
             <img
               className="profile_image"
@@ -15,7 +15,7 @@ export default class About extends Component {
             ></img>
           </div>
         </div>
-        <div className="split right">
+        <div className="spl right">
           <div className="centered">
             <div className="name_title">Ruchitha Rajaghatta</div>
             <div className="brief_description">

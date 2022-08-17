@@ -15,20 +15,20 @@ const Ingredients = ({ ingreds, deleteIngred }) => {
       return (
         <Grid key={ingred.id}>
           <Card 
-            style={{marginTop:10}}>
+            style={{marginTop:10, width:550, left:0}}>
             {/* Remember, we set the local state of this todo item when the user submits the form in 
             AddTodo.js. All we need to do is return the todo list item {todo.content} */}
             <ListItemButton component="a" href="#simple-list">
               <Checkbox style={{paddingLeft:0}} color="primary" onClick={() => deleteIngred(ingred.id)}>
               </Checkbox>
-              <ListItemText primary={ingred.content} secondary={ingred.date}/>
+              <ListItemText primary={ingred.content} secondary={ingred.date}/><ListItemText primary={String(ingred.qty)+" "+ingred.measurement}/>
             </ListItemButton>
           </Card>
         </Grid>
       );
     })
   ) : (
-    <p>You have no ingredients left </p>
+    <p>Time To Stock Your Pantry!</p>
   );
   // Lastly, return the todoList constant that we created above to show all of the items on the screen.
   return (

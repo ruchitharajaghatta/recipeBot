@@ -9,6 +9,7 @@ import {
 } from "react-router-dom"
 import About from "../../pages/About";
 import Stock from "../../pages/Stock";
+import Recipes from "../../pages/Recipes";
 
 export default class NavbarComp extends Component {
     render() {
@@ -23,6 +24,7 @@ export default class NavbarComp extends Component {
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to={"/"}> Pantry </Nav.Link>
                         <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
+                        <Nav.Link as={Link} to={"/recipes"}>Recipes</Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -32,6 +34,7 @@ export default class NavbarComp extends Component {
                 <Routes>
                 <Route exact path="/" element={<Stock/>}/>
                 <Route exact path="/about" element={<About/>}/>
+                <Route exact path="/recipes" element={<Recipes/>}/>
                 </Routes>
             </div>
             </Router>

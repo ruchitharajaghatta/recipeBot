@@ -10,6 +10,11 @@
   overflow-x: hidden;
   padding-top: 100px;
 }
+
+.current {
+  padding-bottom: 50px;
+}
+
 .add {
   padding-top: 50px;
 }
@@ -18,3 +23,9 @@
   right: 0;
   background-color: ghostwhite;
 }
+
+.left {
+  left:0;
+  background-color: ghostwhite;
+}
+

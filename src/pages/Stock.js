@@ -14,6 +14,8 @@ class Stock extends Component {
   // the addTodo function simply creates a new array that includes the user submitted todo item and then
   // updates the state with the new list.
   addIngredient = (ingred) => {
+    const exists = this.state.ingreds.find(i => i.content === ingred.content);
+    if (exists){ return }
     // In React, keys or ids in a list help identify which items have changed, been added or removed. Keys
     // should not share duplicate values.
     // To avoid having dup values, we use the Math.random() function to generate a random value for a todo id.
@@ -45,7 +47,7 @@ class Stock extends Component {
 
   render() {
     return (
-      <div className="split right">
+      <div className="split left">
         <h1> Add Ingredients </h1>
         {/* When passing the AddTodo component, addTodo is a prop that is used in the 
         AddTodo.js file when handling the submit */}
@@ -55,7 +57,10 @@ class Stock extends Component {
         
         {/* When returning the Todos component, todos is a prop passed to the todos.js file
          to format and render the current todo list state */}
+      <div className="split right">
+        <h1 className="current">Current Stock</h1>
         <Ingredients ingreds={this.state.ingreds} deleteIngred={this.deleteIngred}/>
+        </div>
       </div>
 
     );
